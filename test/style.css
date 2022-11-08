@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(96.74% 276.79% at 3.59% 5.28%, #F0F4FF 0%, #A5B6EE 100%);
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.container {
+    margin-top: 84px;
+}
+
+.timer {
+    width: 400px;
+    height: 360px;
+    background: linear-gradient(144.07deg, #5572BB 2.13%, #374B7C 102.97%);
+    box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+    border-radius: 16px;
+    margin: 60px auto;
+    padding: 48px 58px 40px;
+}
+
+.tit-timer {
+    font-family: 'Pretendard-Regular';
+    color: #fff;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.btns {
+    display: flex;
+    gap: 22px;
+    margin-top: 57px;
+}
+
+.btn-hrs {
+    display: flex;
+    flex-direction: column;
+    color: #A5B6EE;
+}
+
+#time-hrs, #time-min, #time-sec {
+    width: 80px;
+    height: 80px;
+    margin-top: 4px;
+    background: linear-gradient(314.28deg, #304577 0%, #4C65A0 83%);
+    border: 1px solid #354971;
+    border-radius: 4px;
+    font-size: 40px;
+    text-align: center;
+    color: #FFF;
+}
+
+.btn-control {
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn-control img {
+    width: 14px;
+    height: 14px;
+}
+
+.btn-start, .btn-pause, .btn-reset {
+    width: 112px;
+    height: 48px;
+    padding: 16px 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: #617199;
+    background: #324577;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+}

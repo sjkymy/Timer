@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>타이머</title>
+</head>
+<body>
+    <div class="container">
+        <img src="images/weniv-logo.png" alt="" class="img-log">
+        <section class="timer">
+            <h1 class="tit-timer">TIMER</h1>
+            <div class="btns">
+                <div class= "btn-hrs">
+                    <label for="time-hrs">HRS</label>
+                    <input id="time-hrs" type="text">
+                </div>
+                <div class= "btn-hrs">
+                    <label for="time-min">MIN</label>
+                    <input id="time-min" type="text">
+                </div>
+                <div class= "btn-hrs">
+                    <label for="time-sec">SEC</label>
+                    <input id="time-sec" type="text">
+                </div>
+            </div>
+
+            <div class="btn-control">
+                <button class="btn-start">
+                    <img src="images/start.png" alt="">
+                    <p>START</p>
+                </button>
+                <button class="btn-pause">
+                    <img src="images/start.png" alt="">
+                    <p>PAUSE</p>
+                </button>
+                <button class="btn-reset">
+                    <img src="images/reset.png" alt="">
+                    <p>RESET</p>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const timeSec = document.querySelector('#time-sec');
+        const btnStart = document.querySelector('.btn-start');
+
+        let sec = 10;
+        timeSec.value = sec; 
+        btnStart.addEventListener('click', TIMER())
+
+        function TIMER() {
+            playTime = setInterval(function() {
+                sec = sec - 0.5;
+                if (sec > 0) {
+                        sec = sec - 0.5;
+                        timeSec.value = Math.floor(sec);
+                    }
+                if (sec === 0) {
+                    sec = 10;
+                    timeSec.value = Math.floor(sec)
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
